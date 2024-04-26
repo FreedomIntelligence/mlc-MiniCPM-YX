@@ -1,4 +1,4 @@
-package com.modelbest.minicpm
+package com.modelbest.minicpmyx
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
@@ -20,6 +20,7 @@ import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.Pause
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -171,6 +172,18 @@ fun ModelView(
                     )
                 }
             } else if (modelState.modelInitState.value == ModelInitState.Finished) {
+
+                // connect to pi ble
+                Button(
+                    onClick = {
+                        modelState.startChat()
+                        navController.navigate("ble")
+                    },
+                    enabled = appViewModel.chatState.interruptable(),
+                ) {
+                    Text(text = "Connect Pi Bluetooth")
+                }
+
                 IconButton(
                     onClick = {
                         modelState.startChat()
@@ -186,6 +199,8 @@ fun ModelView(
                         contentDescription = "start chatting",
                     )
                 }
+
+
             } else {
                 IconButton(
                     enabled = false, onClick = {}, modifier = Modifier

@@ -1,6 +1,6 @@
-package com.modelbest.minicpm
+package com.modelbest.minicpmyx
 
-import com.modelbest.minicpm.ui.theme.MLCChatTheme
+import com.modelbest.minicpmyx.ui.theme.MLCChatTheme
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor

@@ -1,4 +1,4 @@
-package com.modelbest.minicpm.ui.theme
+package com.modelbest.minicpmyx.ui.theme
 
 import android.app.Activity
 import android.os.Build

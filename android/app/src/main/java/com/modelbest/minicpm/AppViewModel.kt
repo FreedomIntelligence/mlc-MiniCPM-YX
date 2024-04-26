@@ -1,4 +1,4 @@
-package com.modelbest.minicpm
+package com.modelbest.minicpmyx
 
 import com.modelbest.mlcllm.ChatModule
 import android.annotation.SuppressLint

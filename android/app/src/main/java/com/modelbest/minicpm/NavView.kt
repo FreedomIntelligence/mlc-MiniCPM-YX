@@ -1,4 +1,4 @@
-package com.modelbest.minicpm
+package com.modelbest.minicpmyx
 
 import android.app.Activity
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,5 +15,6 @@ fun NavView(activity:Activity, appViewModel: AppViewModel = viewModel()) {
     NavHost(navController = navController, startDestination = "home") {
         composable("home") { StartView(navController, appViewModel) }
         composable("chat") { ChatView(navController, appViewModel.chatState, activity) }
+        composable("ble") { BleView(navController, appViewModel.chatState, activity) }
     }
 }
